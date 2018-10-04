@@ -40,6 +40,10 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-#Prueba Fredy Talero
+#Prueba Fredy 
 #Prueb desde el servidor
+<<<<<<< HEAD
 #Cambio solo local
+=======
+#Edicion en el servidor
+>>>>>>> 14d3a71f4744f578002f39caec68549ee59aa44f
