@@ -7,7 +7,7 @@ end
 
 #INSERCIÓN
 response = client.post do |req|
-    req.url '/api/v1/stops'
+    req.url 'https://warm-temple-33410.herokuapp.com/api/v1/stops'
     req.headers['Content-Type'] = 'application/json'
     req.body = '{"stop":{"address": "fedesoft", "latitude": "1245879", "longitude": "12454587"}}'
 end
