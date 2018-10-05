@@ -13,12 +13,12 @@ class Api::V1::StopsController < ApplicationController
     render json: @stop
   end
 
-  # POST /stops
+  # POST /stopscreate
   def create
     @stop = Stop.new(stop_params)
 
     if @stop.save
-      render json: @stop, status: :created, location: @stop
+      render json: @stop, status: :created
     else
       render json: @stop.errors, status: :unprocessable_entity
     end
@@ -46,6 +46,6 @@ class Api::V1::StopsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def stop_params
-      params.require(:stop).permit(:address, :latitude, :length)
+      params.require(:stop).permit(:address, :latitude, :longitude)
     end
 end
