@@ -10,6 +10,18 @@
 #     stops = Stop.create({address: Faker::Address.street_address, latitude: Faker::Address.latitude, longitude: Faker::Address.longitude})  
 # end
 
-10.times do
-    type_trucks = TypeTruck.create({name: Faker::Vehicle.make_and_model, description: Faker::Vehicle.standard_specs})
+# 10.times do
+#     type_trucks = TypeTruck.create({name: Faker::Vehicle.make_and_model, description: Faker::Vehicle.standard_specs})
+# end
+
+# 10.times do
+#     route_stops = RouteStop.create({order: Faker::Number.between(1, 10)})
+# end
+
+# 10.times do
+#     route_schedules = RouteSchedule.create({timStart: Faker::Time.between(DateTime.now - 1, DateTime.now), timEnd: Faker::Time.between(DateTime.now - 1, DateTime.now)})
+# end
+
+15.times do
+    recycling_points = RecyclingPoint.create({name: Faker::ParksAndRec.character, location: Faker::ParksAndRec.character, latitude: Faker::Address.latitude, longitude: Faker::Address.longitude})  
 end

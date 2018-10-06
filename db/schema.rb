@@ -10,7 +10,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181006182015) do
+ActiveRecord::Schema.define(version: 20181006193740) do
+
+  create_table "recycling_points", force: :cascade do |t|
+    t.string   "name"
+    t.string   "location"
+    t.string   "latitude"
+    t.string   "longitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "route_schedules", force: :cascade do |t|
+    t.datetime "timStart"
+    t.datetime "timEnd"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "route_stops", force: :cascade do |t|
+    t.integer  "order"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "stops", force: :cascade do |t|
     t.string   "address"
