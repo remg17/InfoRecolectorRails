@@ -45,8 +45,10 @@ ActiveRecord::Schema.define(version: 20181006193740) do
   create_table "trucks", force: :cascade do |t|
     t.string   "name"
     t.string   "licensePlate"
+    t.integer  "typetruck_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.index ["typetruck_id"], name: "index_trucks_on_typetruck_id"
   end
 
   create_table "type_trucks", force: :cascade do |t|
