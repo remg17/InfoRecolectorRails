@@ -66,12 +66,12 @@ ActiveRecord::Schema.define(version: 20181006210314) do
   end
 
   create_table "trucks", force: :cascade do |t|
-    t.integer  "typetruck_id"
+    t.integer  "type_truck_id"
     t.string   "name"
     t.string   "licensePlate"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.index ["typetruck_id"], name: "index_trucks_on_typetruck_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.index ["type_truck_id"], name: "index_trucks_on_type_truck_id"
   end
 
   create_table "type_trucks", force: :cascade do |t|

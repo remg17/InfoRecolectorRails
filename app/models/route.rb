@@ -3,12 +3,12 @@ class Route < ApplicationRecord
     has_and_belongs_to_many :trucks
 
     #Relación con la tabla RouteStop
-    has_many :routestops
-    has_many :stops, through => :routestops
+    has_many :route_stops
+    has_many :stops, :through => :route_stops
 
     #Relación con la tabla RouteSchedule
-    has_many :routeschedules
-    has_many :weeks, through => :routeschedules
+    has_many :route_schedules
+    has_many :weeks, :through => :route_schedules
 
     validates :name, presence: true
 end
