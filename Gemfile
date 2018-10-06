@@ -6,7 +6,7 @@ git_source(:github) do |repo_name|
 end
 
 
-gem 'faraday', '~> 0.9.2'
+gem 'faraday', '~> 0.15.3'
 gem 'oj', '~> 3.6', '~> 3.6.11'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -36,18 +36,18 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'sqlite3'
   gem 'byebug', platform: :mri
+  gem 'rspec-rails', '>= 3.5.0' # Serializer
+  gem 'factory_bot_rails', '~> 4.11', '>= 4.11.1'  
 end
 
 group :development do
-  gem 'faker', '~> 1.9', '>= 1.9.1'
+  gem 'faker', '~> 1.9', '>= 1.9.1'  
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :production do
-  gem 'pg', '~> 1.1', '>= 1.1.3'
+  gem 'pg', '~> 1.1', '>= 1.1.3' # Libreria para postgres
   gem 'rails_12factor', '~> 0.0.3'
 end
-
-#Test REMG
