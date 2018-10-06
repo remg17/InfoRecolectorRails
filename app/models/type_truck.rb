@@ -1,0 +1,2 @@
+class TypeTruck < ApplicationRecord
+end
