@@ -8,6 +8,7 @@ Rails.application.routes.draw do
       resources :route_stops
       resources :route_schedules
       resources :recycling_points
+      resources :routes
     end
   end
 end

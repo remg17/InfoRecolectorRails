@@ -22,6 +22,10 @@
 #     route_schedules = RouteSchedule.create({timStart: Faker::Time.between(DateTime.now - 1, DateTime.now), timEnd: Faker::Time.between(DateTime.now - 1, DateTime.now)})
 # end
 
-15.times do
-    recycling_points = RecyclingPoint.create({name: Faker::ParksAndRec.character, location: Faker::ParksAndRec.character, latitude: Faker::Address.latitude, longitude: Faker::Address.longitude})  
+# 15.times do
+#     recycling_points = RecyclingPoint.create({name: Faker::ParksAndRec.character, location: Faker::ParksAndRec.character, latitude: Faker::Address.latitude, longitude: Faker::Address.longitude})  
+# end
+
+10.times do
+    routes = Route.create({name: Faker::Superhero.name})
 end
