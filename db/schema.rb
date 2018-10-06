@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20181006203758) do
+ActiveRecord::Schema.define(version: 20181006210314) do
 
   create_table "recycling_points", force: :cascade do |t|
     t.string   "name"
@@ -22,16 +22,24 @@ ActiveRecord::Schema.define(version: 20181006203758) do
   end
 
   create_table "route_schedules", force: :cascade do |t|
+    t.integer  "week_id"
+    t.integer  "route_id"
     t.datetime "timStart"
     t.datetime "timEnd"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["route_id"], name: "index_route_schedules_on_route_id"
+    t.index ["week_id"], name: "index_route_schedules_on_week_id"
   end
 
   create_table "route_stops", force: :cascade do |t|
+    t.integer  "stop_id"
+    t.integer  "route_id"
     t.integer  "order"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["route_id"], name: "index_route_stops_on_route_id"
+    t.index ["stop_id"], name: "index_route_stops_on_stop_id"
   end
 
   create_table "routes", force: :cascade do |t|
@@ -48,10 +56,19 @@ ActiveRecord::Schema.define(version: 20181006203758) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "truck_routes", force: :cascade do |t|
+    t.integer  "truck_id"
+    t.integer  "route_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["route_id"], name: "index_truck_routes_on_route_id"
+    t.index ["truck_id"], name: "index_truck_routes_on_truck_id"
+  end
+
   create_table "trucks", force: :cascade do |t|
+    t.integer  "typetruck_id"
     t.string   "name"
     t.string   "licensePlate"
-    t.integer  "typetruck_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.index ["typetruck_id"], name: "index_trucks_on_typetruck_id"

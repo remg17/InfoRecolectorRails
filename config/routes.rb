@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       resources :routes
       resources :weeks
       resources :users
+      resources :truck_routes
     end
   end
 end
