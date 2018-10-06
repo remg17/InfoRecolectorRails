@@ -25,3 +25,18 @@
 # 15.times do
 #     recycling_points = RecyclingPoint.create({name: Faker::ParksAndRec.character, location: Faker::ParksAndRec.character, latitude: Faker::Address.latitude, longitude: Faker::Address.longitude})  
 # end
+# end
+
+# 10.times do
+#     routes = Route.create({name: Faker::Superhero.name})
+# end
+
+# days = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"]
+# for day in days do
+#     routes = Week.create({day: day})
+# end
+
+10.times do
+    users = User.create({username: Faker::Internet.username, name: Faker::Name.first_name, lastname: Faker::Name.last_name,
+                        email: Faker::Internet.email, password: Faker::Internet.password(8)})
+end
