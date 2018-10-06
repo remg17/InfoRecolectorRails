@@ -30,7 +30,12 @@
 #     routes = Route.create({name: Faker::Superhero.name})
 # end
 
-days = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"]
-for day in days do
-    routes = Week.create({day: day})
+# days = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"]
+# for day in days do
+#     routes = Week.create({day: day})
+# end
+
+10.times do
+    users = User.create({username: Faker::Internet.username, name: Faker::Name.first_name, lastname: Faker::Name.last_name,
+                        email: Faker::Internet.email, password: Faker::Internet.password(8)})
 end

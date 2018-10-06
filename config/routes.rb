@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  
   namespace 'api' do
     namespace 'v1' do
       resources :stops
@@ -9,6 +10,7 @@ Rails.application.routes.draw do
       resources :recycling_points
       resources :routes
       resources :weeks
+      resources :users
     end
   end
 end
