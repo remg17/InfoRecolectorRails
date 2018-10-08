@@ -51,3 +51,5 @@ group :production do
   gem 'pg', '~> 1.1', '>= 1.1.3' # Libreria para postgres
   gem 'rails_12factor', '~> 0.0.3'
 end
+
+# Prueba desde maquina local oficina
