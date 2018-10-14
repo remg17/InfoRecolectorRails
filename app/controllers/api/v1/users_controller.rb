@@ -40,7 +40,7 @@ class Api::V1::UsersController < ApplicationController
   # DELETE /users/1.json
   def destroy
     @user.destroy
-    render status: :ok
+    render json: @users, status: :ok
   end
 
   private
