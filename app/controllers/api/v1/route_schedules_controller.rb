@@ -1,10 +1,11 @@
-class RouteSchedulesController < ApplicationController
+class Api::V1::RouteSchedulesController < ApplicationController
   before_action :set_route_schedule, only: [:show, :update, :destroy]
 
   # GET /route_schedules
   # GET /route_schedules.json
   def index
     @route_schedules = RouteSchedule.all
+    render json: @route_schedules
   end
 
   # GET /route_schedules/1

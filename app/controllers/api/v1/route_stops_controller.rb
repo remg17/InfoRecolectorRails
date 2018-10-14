@@ -1,10 +1,11 @@
-class RouteStopsController < ApplicationController
+class Api::V1::RouteStopsController < ApplicationController
   before_action :set_route_stop, only: [:show, :update, :destroy]
 
   # GET /route_stops
   # GET /route_stops.json
   def index
     @route_stops = RouteStop.all
+    render json: @route_stops
   end
 
   # GET /route_stops/1

@@ -5,6 +5,7 @@ class Api::V1::RoutesController < ApplicationController
   # GET /routes.json
   def index
     @routes = Route.all
+    render json: @routes
   end
 
   # GET /routes/1

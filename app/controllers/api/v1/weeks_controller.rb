@@ -1,10 +1,11 @@
-class WeeksController < ApplicationController
+class Api::V1::WeeksController < ApplicationController
   before_action :set_week, only: [:show, :update, :destroy]
 
   # GET /weeks
   # GET /weeks.json
   def index
     @weeks = Week.all
+    render json: @weeks
   end
 
   # GET /weeks/1

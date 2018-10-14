@@ -1,10 +1,11 @@
-class RecyclingPointsController < ApplicationController
+class Api::V1::RecyclingPointsController < ApplicationController
   before_action :set_recycling_point, only: [:show, :update, :destroy]
 
   # GET /recycling_points
   # GET /recycling_points.json
   def index
     @recycling_points = RecyclingPoint.all
+    render json: @recycling_points
   end
 
   # GET /recycling_points/1
