@@ -49,6 +49,6 @@ class Api::V1::RecyclingPointsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def recycling_point_params
-      params.require(:recycling_point).permit(:name, :location, :latitude, :longitud)
+      params.require(:recycling_point).permit(:name, :location, :latitude, :longitude)
     end
 end

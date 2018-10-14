@@ -1,3 +1,3 @@
 class RecyclingPointSerializer < ActiveModel::Serializer
-  attributes :id, :name, :location, :latitude, :longitud
+  attributes :id, :name, :location, :latitude, :longitude
 end
