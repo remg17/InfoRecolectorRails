@@ -11,6 +11,7 @@ class Api::V1::TrucksController < ApplicationController
   # GET /trucks/1
   # GET /trucks/1.json
   def show
+    render json: @truck  
   end
 
   # POST /trucks
@@ -19,7 +20,7 @@ class Api::V1::TrucksController < ApplicationController
     @truck = Truck.new(truck_params)
 
     if @truck.save
-      render :show, status: :created, location: @truck
+      render json: @truck, status: :created
     else
       render json: @truck.errors, status: :unprocessable_entity
     end
@@ -29,7 +30,7 @@ class Api::V1::TrucksController < ApplicationController
   # PATCH/PUT /trucks/1.json
   def update
     if @truck.update(truck_params)
-      render :show, status: :ok, location: @truck
+      render json: @truck, status: :ok
     else
       render json: @truck.errors, status: :unprocessable_entity
     end
@@ -39,6 +40,7 @@ class Api::V1::TrucksController < ApplicationController
   # DELETE /trucks/1.json
   def destroy
     @truck.destroy
+    render json: @truck, status: :ok    
   end
 
   private

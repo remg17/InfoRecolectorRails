@@ -11,6 +11,7 @@ class Api::V1::TruckRoutesController < ApplicationController
   # GET /truck_routes/1
   # GET /truck_routes/1.json
   def show
+    render json: @truck_route    
   end
 
   # POST /truck_routes
@@ -19,7 +20,7 @@ class Api::V1::TruckRoutesController < ApplicationController
     @truck_route = TruckRoute.new(truck_route_params)
 
     if @truck_route.save
-      render :show, status: :created, location: @truck_route
+      render json: @truck_route, status: :created
     else
       render json: @truck_route.errors, status: :unprocessable_entity
     end
@@ -29,7 +30,7 @@ class Api::V1::TruckRoutesController < ApplicationController
   # PATCH/PUT /truck_routes/1.json
   def update
     if @truck_route.update(truck_route_params)
-      render :show, status: :ok, location: @truck_route
+      render json: @truck_route, status: :ok
     else
       render json: @truck_route.errors, status: :unprocessable_entity
     end
@@ -39,6 +40,7 @@ class Api::V1::TruckRoutesController < ApplicationController
   # DELETE /truck_routes/1.json
   def destroy
     @truck_route.destroy
+    render json: @truck_route, status: :ok    
   end
 
   private
