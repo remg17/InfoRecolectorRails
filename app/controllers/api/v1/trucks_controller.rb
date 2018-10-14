@@ -1,10 +1,11 @@
-class TrucksController < ApplicationController
+class Api::V1::TrucksController < ApplicationController
   before_action :set_truck, only: [:show, :update, :destroy]
 
   # GET /trucks
   # GET /trucks.json
   def index
     @trucks = Truck.all
+    render json: @trucks
   end
 
   # GET /trucks/1
