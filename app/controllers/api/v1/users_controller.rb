@@ -20,7 +20,6 @@ class Api::V1::UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      # render :show, status: :created, location: @user
       render json: @user, status: :created
     else
       render json: @user.errors, status: :unprocessable_entity
@@ -31,7 +30,6 @@ class Api::V1::UsersController < ApplicationController
   # PATCH/PUT /users/1.json
   def update
     if @user.update(user_params)
-      # render :show, status: :ok, location: @user
       render json: @user, status: :ok
     else
       render json: @user.errors, status: :unprocessable_entity
