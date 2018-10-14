@@ -6,15 +6,15 @@ client = Faraday.new(url: 'http://info-recolector-rails.herokuapp.com') do |conf
 end
 
 #INSERCIÓN
-# response = client.post do |req|
-#     req.url '/api/v1/users'
-#     req.headers['Content-Type'] = 'application/json'
-#     req.body = '{"user":{"username": "ftalero"
-#                             , "name": "Fredy"
-#                             , "lastname": "Talero"
-#                             , "email": "ftalero@123.com"
-#                             , "password": "123456789"}}'
-# end
+response = client.post do |req|
+    req.url '/api/v1/users'
+    req.headers['Content-Type'] = 'application/json'
+    req.body = '{"user":{"username": "rmunoz"
+                            , "name": "Raúl E."
+                            , "lastname": "Muñoz G."
+                            , "email": "rmunoz@123.com"
+                            , "password": "777"}}'
+end
 
 #CONSULTA
 # response = client.get do |req|
@@ -23,12 +23,12 @@ end
 # end
 
 #ACTUALIZAR
-response = client.put do |req|
-    req.url '/api/v1/users/1'
-    req.headers['Content-Type'] = 'application/json'
-    req.body = '{"user":{"name": "J. Fredy"
-                    , "email": "ftalero@123.com.co"}}'
-end
+# response = client.put do |req|
+#     req.url '/api/v1/users/1'
+#     req.headers['Content-Type'] = 'application/json'
+#     req.body = '{"user":{"name": "J. Fredy"
+#                     , "email": "ftalero@123.com.co"}}'
+# end
 
 #ELIMINAR
 # response = client.delete do |req|
