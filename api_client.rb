@@ -18,7 +18,7 @@ end
 
 #ELIMINAR
 response = client.delete do |req|
-    req.url '/api/v1/users/4'
+    req.url '/api/v1/users/3'
     req.headers['Content-Type'] = 'application/json'
 end
 
