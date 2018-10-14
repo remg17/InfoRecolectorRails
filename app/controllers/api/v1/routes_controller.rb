@@ -1,4 +1,4 @@
-class RoutesController < ApplicationController
+class Api::V1::RoutesController < ApplicationController
   before_action :set_route, only: [:show, :update, :destroy]
 
   # GET /routes
