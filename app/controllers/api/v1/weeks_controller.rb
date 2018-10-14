@@ -11,6 +11,7 @@ class Api::V1::WeeksController < ApplicationController
   # GET /weeks/1
   # GET /weeks/1.json
   def show
+    render json: @week    
   end
 
   # POST /weeks
@@ -19,7 +20,7 @@ class Api::V1::WeeksController < ApplicationController
     @week = Week.new(week_params)
 
     if @week.save
-      render :show, status: :created, location: @week
+      render json: @week, status: :created      
     else
       render json: @week.errors, status: :unprocessable_entity
     end
@@ -29,7 +30,7 @@ class Api::V1::WeeksController < ApplicationController
   # PATCH/PUT /weeks/1.json
   def update
     if @week.update(week_params)
-      render :show, status: :ok, location: @week
+      render json: @week, status: :ok
     else
       render json: @week.errors, status: :unprocessable_entity
     end
@@ -39,6 +40,7 @@ class Api::V1::WeeksController < ApplicationController
   # DELETE /weeks/1.json
   def destroy
     @week.destroy
+    render json: @week, status: :ok    
   end
 
   private
