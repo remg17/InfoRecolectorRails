@@ -1,10 +1,11 @@
-class TypeTrucksController < ApplicationController
+class Api::V1::TypeTrucksController < ApplicationController
   before_action :set_type_truck, only: [:show, :update, :destroy]
 
   # GET /type_trucks
   # GET /type_trucks.json
   def index
     @type_trucks = TypeTruck.all
+    render json: @type_trucks
   end
 
   # GET /type_trucks/1
