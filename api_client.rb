@@ -17,9 +17,19 @@ end
 # end
 
 #ELIMINAR
-response = client.delete do |req|
-    req.url '/api/v1/users/3'
+# response = client.delete do |req|
+#     req.url '/api/v1/users/2'
+#     req.headers['Content-Type'] = 'application/json'
+# end
+
+response = client.push do |req|
+    req.url '/api/v1/users/1'
     req.headers['Content-Type'] = 'application/json'
+    req.body = '{"user":{"username": "ftalero"
+                             , "name": "Fredy"
+                             , "lastname": "Talero"
+                             , "email": "ftalero@123.com.co"
+                             , "password": "123456789"}}'
 end
 
 
