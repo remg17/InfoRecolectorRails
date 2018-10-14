@@ -1,7 +1,7 @@
 require 'faraday'
 
 
-client = Faraday.new(url: 'https://warm-temple-33410.herokuapp.com') do |config|
+client = Faraday.new(url: 'http://mysterious-retreat-79142.herokuapp.com/api/v1/stops') do |config|
     config.adapter Faraday.default_adapter
 end
 
