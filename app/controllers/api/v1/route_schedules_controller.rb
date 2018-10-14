@@ -11,6 +11,7 @@ class Api::V1::RouteSchedulesController < ApplicationController
   # GET /route_schedules/1
   # GET /route_schedules/1.json
   def show
+    render json: @route_schedule
   end
 
   # POST /route_schedules
@@ -19,7 +20,7 @@ class Api::V1::RouteSchedulesController < ApplicationController
     @route_schedule = RouteSchedule.new(route_schedule_params)
 
     if @route_schedule.save
-      render :show, status: :created, location: @route_schedule
+      render json: @route_schedule, status: :created
     else
       render json: @route_schedule.errors, status: :unprocessable_entity
     end
@@ -29,7 +30,7 @@ class Api::V1::RouteSchedulesController < ApplicationController
   # PATCH/PUT /route_schedules/1.json
   def update
     if @route_schedule.update(route_schedule_params)
-      render :show, status: :ok, location: @route_schedule
+      render json: @route_schedule, status: :ok      
     else
       render json: @route_schedule.errors, status: :unprocessable_entity
     end
@@ -39,6 +40,7 @@ class Api::V1::RouteSchedulesController < ApplicationController
   # DELETE /route_schedules/1.json
   def destroy
     @route_schedule.destroy
+    render json: @route_schedule
   end
 
   private

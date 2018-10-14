@@ -11,6 +11,7 @@ class Api::V1::RouteStopsController < ApplicationController
   # GET /route_stops/1
   # GET /route_stops/1.json
   def show
+    render json: @route_stop
   end
 
   # POST /route_stops
@@ -19,7 +20,7 @@ class Api::V1::RouteStopsController < ApplicationController
     @route_stop = RouteStop.new(route_stop_params)
 
     if @route_stop.save
-      render :show, status: :created, location: @route_stop
+      render json: @route_stop, status: :created
     else
       render json: @route_stop.errors, status: :unprocessable_entity
     end
@@ -29,7 +30,7 @@ class Api::V1::RouteStopsController < ApplicationController
   # PATCH/PUT /route_stops/1.json
   def update
     if @route_stop.update(route_stop_params)
-      render :show, status: :ok, location: @route_stop
+      render json: @route_stop, status: :ok
     else
       render json: @route_stop.errors, status: :unprocessable_entity
     end
@@ -39,6 +40,7 @@ class Api::V1::RouteStopsController < ApplicationController
   # DELETE /route_stops/1.json
   def destroy
     @route_stop.destroy
+    render json: @route_stop, status: :ok
   end
 
   private

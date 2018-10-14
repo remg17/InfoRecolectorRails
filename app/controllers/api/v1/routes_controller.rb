@@ -11,6 +11,7 @@ class Api::V1::RoutesController < ApplicationController
   # GET /routes/1
   # GET /routes/1.json
   def show
+    render json: @route
   end
 
   # POST /routes
@@ -19,7 +20,7 @@ class Api::V1::RoutesController < ApplicationController
     @route = Route.new(route_params)
 
     if @route.save
-      render :show, status: :created, location: @route
+      render json: @route, status: :created
     else
       render json: @route.errors, status: :unprocessable_entity
     end
@@ -29,7 +30,7 @@ class Api::V1::RoutesController < ApplicationController
   # PATCH/PUT /routes/1.json
   def update
     if @route.update(route_params)
-      render :show, status: :ok, location: @route
+      render json: @route, status: :ok
     else
       render json: @route.errors, status: :unprocessable_entity
     end
@@ -39,6 +40,7 @@ class Api::V1::RoutesController < ApplicationController
   # DELETE /routes/1.json
   def destroy
     @route.destroy
+    render json: @route, status: :ok
   end
 
   private

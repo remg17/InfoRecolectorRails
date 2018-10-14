@@ -11,15 +11,15 @@ class Api::V1::RecyclingPointsController < ApplicationController
   # GET /recycling_points/1
   # GET /recycling_points/1.json
   def show
+    render json: @recycling_point
   end
-
   # POST /recycling_points
   # POST /recycling_points.json
   def create
     @recycling_point = RecyclingPoint.new(recycling_point_params)
 
     if @recycling_point.save
-      render :show, status: :created, location: @recycling_point
+      render json:  @recycling_point, status: :created
     else
       render json: @recycling_point.errors, status: :unprocessable_entity
     end
@@ -29,7 +29,7 @@ class Api::V1::RecyclingPointsController < ApplicationController
   # PATCH/PUT /recycling_points/1.json
   def update
     if @recycling_point.update(recycling_point_params)
-      render :show, status: :ok, location: @recycling_point
+      render json: @recycling_point, status: :ok
     else
       render json: @recycling_point.errors, status: :unprocessable_entity
     end
@@ -39,6 +39,7 @@ class Api::V1::RecyclingPointsController < ApplicationController
   # DELETE /recycling_points/1.json
   def destroy
     @recycling_point.destroy
+    render json: @recycling_point, status: :ok
   end
 
   private
