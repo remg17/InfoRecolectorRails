@@ -1,0 +1,27 @@
+[
+    {
+        "licensePlate": "XL",
+        "name": "Buick",
+        "type_truck_id": "1"
+    },
+    {
+        "licensePlate": "XL",
+        "name": "Chevy",
+        "type_truck_id": "2"
+    },
+    {
+        "licensePlate": "XL",
+        "name": "Buick",
+        "type_truck_id": "3"
+    },
+    {
+        "licensePlate": "XLE",
+        "name": "Buick",
+        "type_truck_id": "4"
+    },
+    {
+        "licensePlate": "ESi",
+        "name": "Toyota",
+        "type_truck_id": "5"
+    }
+]

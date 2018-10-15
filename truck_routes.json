@@ -1,0 +1,22 @@
+[
+    {
+        "route_id": "1",
+        "truck_id": "1"
+    },
+    {
+        "route_id": "2",
+        "truck_id": "2"
+    },
+    {
+        "route_id": "3",
+        "truck_id": "3"
+    },
+    {
+        "route_id": "4",
+        "truck_id": "4"
+    },
+    {
+        "route_id": "5",
+        "truck_id": "5"
+    }
+]

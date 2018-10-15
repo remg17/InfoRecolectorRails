@@ -1,0 +1,27 @@
+[
+    {
+        "description": "[\"Pwr front windows w/(1) touch up/down feature\", \"Front/rear side curtain airbags\", \"Body color door handles\", \"Compact spare tire\", \"Dual-zone automatic climate control system -inc: smog sensor, auto recirculation, clear air filter, pollen filter\", \"3-point ELR driver seat belt w/pretensioner & load limiter\", \"Immobilizer system\"]",
+        "name": "Dodge Charger",
+        "updated_at": "2018-10-06 23:06:39.585954"
+    },
+    {
+        "description": "[\"Electronic parking brake\", \"Locking glove box\", \"Acoustic control induction system (ACIS)\", \"Reclining front bucket seats -inc: active head restraints, double-thickness foam in front seats\", \"Front wheel drive\"]",
+        "name": "Honda Accord",
+        "updated_at": "2018-10-06 23:06:39.818955"
+    },
+    {
+        "description": "[\"Pwr windows -inc: 1-touch open/close\", \"Anti-lock brake system (ABS) -inc: electronic brake force distribution (EBD), brake assist\", \"Battery saver\", \"Child seat upper tether anchorages\", \"Multi-reflector halogen headlamps\", \"Body color fascias w/bright insert\", \"Multi-info display -inc: driving range, average MPG, current MPG, average speed, outside temp, elapsed time, maintenance & diagnostic messages\", \"20'' x 9.0'' front & 20'' x 10.0'' rear aluminum wheels\"]",
+        "name": "Toyota Corolla",
+        "updated_at": "2018-10-06 23:06:39.900954"
+    },
+    {
+        "description": "[\"3-point ELR driver seat belt w/pretensioner & load limiter\", \"Pwr steering cooler\", \"XM satellite radio receiver -inc: 90 day trial subscription\", \"Floor carpeting\", \"Collapsible steering column\", \"Rear child seat tether anchors (LATCH)\"]",
+        "name": "Ford Fiesta",
+        "updated_at": "2018-10-06 23:06:39.990949"
+    },
+    {
+        "description": "[\"Silver accent IP trim finisher -inc: silver shifter finisher\", \"Tilt/telescoping steering column\", \"20'' x 9.0'' front & 20'' x 10.0'' rear aluminum wheels\", \"625-amp maintenance-free battery\", \"Enhanced accident response system unlocks the doors, shuts off the fuel pump and turns on interior lights after airbag deploys\", \"4.6L DOHC 32-valve V8 engine -inc: DI & SFI dual fuel injection, dual variable valve timing w/intelligence & electronically controlled intake (VVT-iE), aluminum block & heads\", \"3-point ELR/ALR rear seat belts at all positions\", \"(2) aux 12V pwr outlets -inc: (1) in center console, (1) w/cigarette lighter\"]",
+        "name": "Nissan Rogue",
+        "updated_at": "2018-10-06 23:06:40.070946"
+    }
+]
