@@ -15,7 +15,7 @@
 #         email: Faker::Internet.email, password: Faker::Internet.password(8)})
 # end
 
-records = JSON.parse(File.read('C:\Users\Talero Caro\Documents\Proyecto Fedesoft\InfoRecolectorRails\users.json'))
+records = JSON.parse(File.read(File.join(Rails.root, 'users.json')))
 records.each do |record|
     User.create!(record)
 end
