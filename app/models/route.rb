@@ -1,6 +1,7 @@
 class Route < ApplicationRecord
-    #Relación con la tabla Truck
-    has_and_belongs_to_many :trucks
+    #Relación con la tabla Truck_Routes
+    has_many :truck_routes
+    has_many :trucks, :through => :truck_routes
 
     #Relación con la tabla RouteStop
     has_many :route_stops
