@@ -16,10 +16,10 @@
 # end
 
 #Usuarios
-# records = JSON.parse(File.read(File.join(Rails.root, 'json', 'users.json')))
-# records.each do |record|
-#     User.create!(record)
-# end
+records = JSON.parse(File.read(File.join(Rails.root, 'json', 'users.json')))
+records.each do |record|
+    User.create!(record)
+end
 #stops
 records = JSON.parse(File.read(File.join(Rails.root, 'json', 'stops.json')))
 records.each do |record|
